@@ -27,6 +27,7 @@ export default function NotarySection() {
           src="/images/courtroom.png"
           alt="Empty Courtroom"
           fill
+          sizes="100vw"
           className="object-cover object-center grayscale"
         />
       </div>
@@ -41,22 +42,22 @@ export default function NotarySection() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center">
         <div ref={gridRef} className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent md:hover:border-secondary transition-all duration-300">
             <FileCheck className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">MNC Agreements</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Attestation for corporate contracts and service level agreements.</p>
           </div>
-          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent md:hover:border-secondary transition-all duration-300">
             <ShieldCheck className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">Affidavits</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Drafting and attestation of legally binding affidavits for all purposes.</p>
           </div>
-          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent md:hover:border-secondary transition-all duration-300">
             <Clock className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">Quick Processing</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Efficient verification services to respect your time constraints.</p>
           </div>
-          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent md:hover:border-secondary transition-all duration-300">
             <CheckCircle2 className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">Absolute Secrecy</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Guaranteed confidentiality for sensitive personal and business data.</p>
@@ -85,7 +86,7 @@ export default function NotarySection() {
             <div className="mt-10 pt-10 border-t border-white/10">
               <a href="#contact">
                 <Button ref={magneticBtnRef} variant="secondary" className="w-full h-14 rounded-none group">
-                  <Phone className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+                  <Phone className="w-4 h-4 mr-2 md:group-hover:animate-pulse" />
                   Book Notary Appointment
                 </Button>
               </a>

@@ -94,15 +94,15 @@ export default function PracticeAreas() {
         {practices.map((practice, idx) => (
           <div 
             key={idx} 
-            className="group block p-6 md:p-8 bg-base hover:bg-primary transition-all duration-500 relative overflow-hidden shadow-sm cursor-default"
+            className="group block p-6 md:p-8 bg-base active:bg-primary md:hover:bg-primary transition-all duration-500 relative overflow-hidden shadow-sm cursor-default"
           >
             {/* Background Accent */}
-            <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500">
+            <div className="absolute top-0 right-0 p-4 opacity-[0.03] active:opacity-[0.08] md:group-hover:opacity-[0.08] transition-opacity duration-500">
               {practice.icon}
             </div>
 
             <div className="relative z-10 space-y-6">
-              <div className="inline-flex p-3 bg-white text-secondary group-hover:bg-secondary group-hover:text-white transition-colors duration-500">
+              <div className="inline-flex p-3 bg-white text-secondary active:bg-secondary active:text-white md:group-hover:bg-secondary md:group-hover:text-white transition-colors duration-500">
                 {practice.icon}
               </div>
               
@@ -110,17 +110,17 @@ export default function PracticeAreas() {
                 <span className="text-[9px] uppercase tracking-widest font-bold text-secondary">
                   {practice.category}
                 </span>
-                <h3 className="text-xl font-serif font-bold text-primary group-hover:text-white transition-colors duration-500">
+                <h3 className="text-xl font-serif font-bold text-primary active:text-white md:group-hover:text-white transition-colors duration-500">
                   {practice.title}
                 </h3>
-                <p className="text-primary/60 group-hover:text-white/70 text-sm leading-relaxed transition-colors duration-500">
+                <p className="text-primary/60 active:text-white/70 md:group-hover:text-white/70 text-sm leading-relaxed transition-colors duration-500">
                   {practice.description}
                 </p>
               </div>
 
-              <div className="pt-4 flex items-center text-sm font-bold text-secondary group-hover:text-white transition-colors duration-500 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="pt-4 flex items-center text-sm font-bold text-secondary active:text-white md:group-hover:text-white transition-colors duration-500 opacity-0 active:opacity-100 md:group-hover:opacity-100 transition-opacity">
                 Professional Advocacy
-                <div className="ml-2 w-4 h-[1px] bg-secondary group-hover:bg-white group-hover:w-8 transition-all duration-500" />
+                <div className="ml-2 w-4 h-[1px] bg-secondary active:bg-white md:group-hover:bg-white active:w-8 md:group-hover:w-8 transition-all duration-500" />
               </div>
             </div>
           </div>

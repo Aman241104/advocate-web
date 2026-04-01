@@ -46,6 +46,7 @@ export default function Testimonials() {
           src="/images/lady-justice.png"
           alt="Lady Justice"
           fill
+          sizes="600px"
           className="object-contain"
         />
       </div>
@@ -92,14 +93,14 @@ export default function Testimonials() {
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-0 md:-px-12 lg:-px-20 z-20">
             <button 
               onClick={prev}
-              className="p-2 sm:p-4 text-white/40 hover:text-secondary transition-colors duration-300 focus:outline-none"
+              className="p-2 sm:p-4 text-white/40 md:hover:text-secondary transition-colors duration-300 focus:outline-none"
               aria-label="Previous Testimonial"
             >
               <ChevronLeft className="w-8 h-8 sm:w-10 sm:h-10" />
             </button>
             <button 
               onClick={next}
-              className="p-2 sm:p-4 text-white/40 hover:text-secondary transition-colors duration-300 focus:outline-none"
+              className="p-2 sm:p-4 text-white/40 md:hover:text-secondary transition-colors duration-300 focus:outline-none"
               aria-label="Next Testimonial"
             >
               <ChevronRight className="w-8 h-8 sm:w-10 sm:h-10" />

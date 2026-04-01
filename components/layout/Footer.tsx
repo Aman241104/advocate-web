@@ -24,6 +24,7 @@ export default function Footer() {
           src="/images/lady-justice-full.png"
           alt="Lady Justice Full"
           fill
+          sizes="33vw"
           className="object-contain object-right-bottom"
         />
       </div>
@@ -54,7 +55,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-white/70 hover:text-white text-sm transition-colors duration-300">
+                  <Link href={link.href} className="text-white/70 md:hover:text-white text-sm transition-colors duration-300">
                     {link.name}
                   </Link>
                 </li>
@@ -68,7 +69,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {practiceAreas.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-white/70 hover:text-white text-sm transition-colors duration-300">
+                  <Link href={link.href} className="text-white/70 md:hover:text-white text-sm transition-colors duration-300">
                     {link.name}
                   </Link>
                 </li>
@@ -82,19 +83,19 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 group">
                 <MapPin className="w-5 h-5 text-secondary shrink-0" />
-                <span className="text-white/70 text-sm group-hover:text-white transition-colors duration-300">
+                <span className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
                   Ahmedabad, Gujarat, India
                 </span>
               </li>
               <li className="flex items-center space-x-3 group">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />
-                <a href="tel:+919825416310" className="text-white/70 text-sm group-hover:text-white transition-colors duration-300">
+                <a href="tel:+919825416310" className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
                   +91 98254 16310
                 </a>
               </li>
               <li className="flex items-center space-x-3 group">
                 <Mail className="w-5 h-5 text-secondary shrink-0" />
-                <a href="mailto:info@divyamodi.in" className="text-white/70 text-sm group-hover:text-white transition-colors duration-300">
+                <a href="mailto:info@divyamodi.in" className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
                   info@divyamodi.in
                 </a>
               </li>

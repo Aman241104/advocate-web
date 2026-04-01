@@ -35,6 +35,7 @@ export default function ContactSection() {
           src="/images/hero-desk.png"
           alt="Consultation Desk"
           fill
+          sizes="50vw"
           className="object-cover object-left grayscale"
         />
       </div>
@@ -60,7 +61,7 @@ export default function ContactSection() {
             <div className="space-y-3">
               <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary/40">General Inquiry</h4>
               <div className="flex items-center space-x-3 group">
-                <div className="p-2 bg-white rounded-full text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                <div className="p-2 bg-white rounded-full text-secondary md:group-hover:bg-secondary md:group-hover:text-white transition-all duration-300">
                   <Phone className="w-4 h-4" />
                 </div>
                 <a href="tel:+919825416310" className="text-lg font-bold text-primary">+91 98254 16310</a>
@@ -69,7 +70,7 @@ export default function ContactSection() {
             <div className="space-y-3">
               <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary/40">Email Us</h4>
               <div className="flex items-center space-x-3 group">
-                <div className="p-2 bg-white rounded-full text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                <div className="p-2 bg-white rounded-full text-secondary md:group-hover:bg-secondary md:group-hover:text-white transition-all duration-300">
                   <Mail className="w-4 h-4" />
                 </div>
                 <a href="mailto:info@divyamodi.in" className="text-lg font-bold text-primary">info@divyamodi.in</a>
@@ -79,11 +80,11 @@ export default function ContactSection() {
 
           <div className="pt-8 border-t border-primary/5 flex flex-wrap gap-4">
              <Button variant="secondary" className="rounded-none h-14 px-8 group w-full sm:w-auto">
-                <Phone className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform" />
+                <Phone className="w-5 h-5 mr-3 md:group-hover:rotate-12 transition-transform" />
                 Call Office
              </Button>
-             <Button variant="outline" className="rounded-none h-14 px-8 border-primary/20 hover:bg-green-600 hover:border-green-600 hover:text-white group w-full sm:w-auto">
-                <MessageCircle className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+             <Button variant="outline" className="rounded-none h-14 px-8 border-primary/20 md:hover:bg-green-600 md:hover:border-green-600 md:hover:text-white group w-full sm:w-auto">
+                <MessageCircle className="w-5 h-5 mr-3 md:group-hover:scale-110 transition-transform" />
                 WhatsApp
              </Button>
           </div>
@@ -125,7 +126,7 @@ export default function ContactSection() {
             
             <Button ref={submitBtnRef} type="submit" size="lg" className="w-full rounded-none group h-16 text-lg font-serif">
               Send Consultation Request
-              <Send className="w-5 h-5 ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <Send className="w-5 h-5 ml-3 md:group-hover:translate-x-1 md:group-hover:-translate-y-1 transition-transform" />
             </Button>
 
             <p className="text-[10px] text-center text-primary/40 uppercase tracking-widest font-bold">

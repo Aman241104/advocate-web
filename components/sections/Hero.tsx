@@ -61,6 +61,7 @@ export default function Hero() {
              src="/images/courtroom-scene.png" 
              alt="Courtroom in Session" 
              fill 
+             sizes="100vw"
              className="object-cover object-center"
              priority
            />
@@ -103,11 +104,11 @@ export default function Hero() {
             <a href="#contact" className="w-full sm:w-auto">
               <Button ref={ctaButtonRef} size="lg" className="rounded-none w-full sm:w-auto group h-14 sm:h-auto">
                 Schedule a Consultation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 md:group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
             <a href="#practice-areas" className="w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="rounded-none w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-primary h-14 sm:h-auto">
+              <Button size="lg" variant="outline" className="rounded-none w-full sm:w-auto border-white/20 text-white md:hover:bg-white md:hover:text-primary h-14 sm:h-auto">
                 View Practice Areas
               </Button>
             </a>

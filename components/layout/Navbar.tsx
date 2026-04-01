@@ -115,12 +115,12 @@ export default function Navbar() {
                 {link.name}
                 <span className={cn(
                   "absolute -bottom-1 left-0 h-0.5 bg-secondary transition-all duration-300",
-                  activeSection === link.href.replace("#", "") ? "w-full" : "w-0 group-hover:w-full"
+                  activeSection === link.href.replace("#", "") ? "w-full" : "w-0 md:group-hover:w-full"
                 )} />
               </a>
             ))}
             <Button ref={navBtnRef} variant="secondary" className="rounded-none ml-4 group">
-              <Phone className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+              <Phone className="w-4 h-4 mr-2 md:group-hover:animate-pulse" />
               Consult Now
             </Button>
           </div>
@@ -170,7 +170,7 @@ export default function Navbar() {
                 </div>
                 <button 
                   onClick={() => setIsOpen(false)} 
-                  className="p-2 text-primary hover:text-secondary transition-colors"
+                  className="p-2 text-primary md:hover:text-secondary transition-colors"
                   aria-label="Close Menu"
                 >
                   <X className="w-8 h-8" />
@@ -187,7 +187,7 @@ export default function Navbar() {
                       "block text-2xl md:text-3xl font-serif font-bold transition-all duration-300",
                       activeSection === link.href.replace("#", "") 
                         ? "text-secondary pl-4 border-l-4 border-secondary" 
-                        : "text-primary/60 hover:text-primary"
+                        : "text-primary/60 md:hover:text-primary"
                     )}
                   >
                     {link.name}

@@ -59,17 +59,17 @@ export default function ArticlesPreview() {
         {featuredArticles.map((article, idx) => (
           <div 
             key={idx} 
-            className="group flex flex-col h-full bg-base p-8 md:p-10 hover:shadow-2xl transition-all duration-500 border-b-2 border-transparent hover:border-secondary cursor-default"
+            className="group flex flex-col h-full bg-base p-8 md:p-10 md:hover:shadow-2xl transition-all duration-500 border-b-2 border-transparent md:hover:border-secondary cursor-default"
           >
             <div className="flex justify-between items-start mb-8">
               <span className="text-[10px] font-bold uppercase tracking-widest text-secondary px-3 py-1 border border-secondary/20">
                 {article.category}
               </span>
-              <BookOpen className="w-5 h-5 text-primary/10 group-hover:text-secondary transition-colors duration-500" />
+              <BookOpen className="w-5 h-5 text-primary/10 md:group-hover:text-secondary transition-colors duration-500" />
             </div>
 
             <div className="flex-1 space-y-4">
-              <h3 className="text-2xl font-serif font-bold text-primary group-hover:text-secondary transition-colors duration-500 leading-snug">
+              <h3 className="text-2xl font-serif font-bold text-primary md:group-hover:text-secondary transition-colors duration-500 leading-snug">
                 {article.title}
               </h3>
               <p className="text-primary/50 text-sm leading-relaxed line-clamp-3 italic pr-1">

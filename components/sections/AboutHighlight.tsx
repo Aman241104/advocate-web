@@ -34,7 +34,8 @@ export default function AboutHighlight() {
               src="/images/portrait-formal.png"
               alt="Divya N Modi - Senior Advocate & Notary"
               fill
-              className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-center grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700 scale-100 md:scale-110 md:group-hover:scale-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent mix-blend-multiply" />
           </div>
@@ -49,23 +50,25 @@ export default function AboutHighlight() {
 
           {/* Secondary Approchable Image */}
           <div className="absolute top-1/2 -left-20 w-48 h-64 bg-white p-3 shadow-2xl z-20 hidden xl:block -translate-y-1/2">
-             <div className="w-full h-full relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+             <div className="w-full h-full relative overflow-hidden grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700">
                <Image 
                  src="/images/portrait-smile.png"
                  alt="Divya N Modi - Approachable Advocacy"
                  fill
+                 sizes="192px"
                  className="object-cover object-center"
                />
              </div>
           </div>
 
           {/* Team Image Element */}
-          <div className="absolute -top-10 -left-10 w-64 h-40 bg-white p-3 shadow-2xl z-20 hidden xl:block group-hover:translate-x-4 transition-transform duration-700">
-             <div className="w-full h-full relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+          <div className="absolute -top-10 -left-10 w-64 h-40 bg-white p-3 shadow-2xl z-20 hidden xl:block md:group-hover:translate-x-4 transition-transform duration-700">
+             <div className="w-full h-full relative overflow-hidden grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700">
                <Image 
                  src="/images/team.png"
                  alt="Legal Team"
                  fill
+                 sizes="256px"
                  className="object-cover object-center"
                />
              </div>
@@ -127,10 +130,10 @@ export default function AboutHighlight() {
           </div>
 
           <div className="pt-6">
-            <a href="#contact">
-              <Button ref={btnRef} size="lg" className="rounded-none px-12 group">
-                Consult with Divya N Modi
-                <Award className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            <a href="#contact" className="block sm:inline-block">
+              <Button ref={btnRef} size="lg" className="rounded-none w-full sm:w-auto px-4 sm:px-12 group h-14 sm:h-auto">
+                <span className="text-sm sm:text-base md:text-lg whitespace-nowrap">Consult with Divya N Modi</span>
+                <Award className="w-4 h-4 sm:w-5 sm:h-5 ml-2 md:group-hover:rotate-12 transition-transform shrink-0" />
               </Button>
             </a>
           </div>
