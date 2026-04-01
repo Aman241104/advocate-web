@@ -22,27 +22,27 @@ export default function NotarySection() {
   return (
     <Section id="notary" className="bg-base border-y border-primary/5 relative overflow-hidden">
       {/* Decorative Courtroom Background */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none select-none z-0">
+      <div className="absolute inset-0 opacity-[0.1] pointer-events-none select-none z-0">
         <Image 
           src="/images/courtroom.png"
           alt="Empty Courtroom"
           fill
           className="object-cover object-center grayscale"
         />
-        {/* Sub-overlay to improve readability */}
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]" />
       </div>
+
+      {/* Subtle Readability Overlay - reduced intensity and width */}
+      <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-base/80 to-transparent z-1 pointer-events-none" />
 
       <div ref={headerRef} className="max-w-4xl mb-10 md:mb-16 lg:mb-24 relative z-10">
         <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-6">Government Appointed</h5>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
           Professional <span className="text-secondary italic">Notary</span> Services.
         </h2>
-        <p className="text-primary mt-10 text-xl leading-relaxed max-w-2xl italic border-l-4 border-secondary pl-6">
+        <p className="text-primary/60 mt-10 text-xl leading-relaxed max-w-2xl italic border-l-4 border-secondary pl-6">
           Official verification and legal attestation services since 2008, ensuring the highest standards of secrecy and reliability.
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center">
         <div ref={gridRef} className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
