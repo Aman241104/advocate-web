@@ -74,7 +74,7 @@ export default function PracticeAreas() {
 
   return (
     <Section id="practice-areas" className="bg-white relative overflow-hidden">
-      <div ref={headerRef} className="max-w-3xl mb-16 lg:mb-24 relative z-10">
+      <div ref={headerRef} className="max-w-3xl mb-10 md:mb-16 lg:mb-24 relative z-10">
         <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-4">
           Areas of Expertise
         </h5>
@@ -89,7 +89,7 @@ export default function PracticeAreas() {
 
       <div 
         ref={gridRef}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6 md:gap-y-12"
       >
         {practices.map((practice, idx) => (
           <div 

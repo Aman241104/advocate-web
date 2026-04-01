@@ -39,7 +39,7 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start relative z-10">
         {/* Contact Info Column */}
         <div ref={infoRef} className="space-y-12">
           <div className="space-y-6">

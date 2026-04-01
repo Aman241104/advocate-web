@@ -69,7 +69,7 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative z-30">
-        <div className="max-w-4xl mx-auto text-center space-y-10">
+        <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-10">
           {/* Trust Badge */}
           <div className="inline-flex items-center space-x-2 bg-secondary/10 px-4 py-2 rounded-full border border-secondary/20 backdrop-blur-sm">
             <Award className="w-4 h-4 text-secondary" />
@@ -116,7 +116,7 @@ export default function Hero() {
           {/* Quick Stats */}
           <div 
             ref={statsRef}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-16 border-t border-white/10"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-10 md:pt-16 border-t border-white/10"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-center space-x-2 text-secondary">

@@ -125,32 +125,62 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-primary/40 backdrop-blur-md z-[45] lg:hidden"
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 right-0 bg-base border-b border-primary/10 shadow-xl lg:hidden"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-base shadow-2xl z-[50] lg:hidden flex flex-col"
           >
-            <div className="flex flex-col p-6 space-y-4">
+            <div className="p-6 flex items-center justify-between border-b border-primary/5">
+              <div className="flex flex-col">
+                <span className="font-serif text-xl font-bold tracking-tight text-primary leading-none">
+                  Divya N Modi
+                </span>
+                <span className="text-[8px] uppercase tracking-[0.3em] text-secondary font-medium mt-1">
+                  Advocate & Notary
+                </span>
+              </div>
+              <button onClick={() => setIsOpen(false)} className="p-2 text-primary">
+                <X className="w-8 h-8" />
+              </button>
+            </div>
+            
+            <div className="flex-1 overflow-y-auto p-8 space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
                   className={cn(
-                    "text-lg font-medium text-primary hover:text-secondary py-2 border-b border-primary/5 last:border-0",
-                    activeSection === link.href.replace("#", "") ? "text-secondary" : ""
+                    "block text-2xl font-serif font-bold py-4 transition-colors duration-300",
+                    activeSection === link.href.replace("#", "") ? "text-secondary" : "text-primary/60"
                   )}
                 >
                   {link.name}
                 </a>
               ))}
-              <Button variant="secondary" className="w-full rounded-none py-4 text-lg">
-                <Phone className="w-5 h-5 mr-2" />
+            </div>
+
+            <div className="p-8 border-t border-primary/5">
+              <Button variant="secondary" className="w-full h-14 rounded-none text-lg font-serif">
+                <Phone className="w-5 h-5 mr-3" />
                 Consult Now
               </Button>
             </div>

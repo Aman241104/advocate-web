@@ -33,7 +33,7 @@ export default function NotarySection() {
         <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]" />
       </div>
 
-      <div ref={headerRef} className="max-w-4xl mb-16 lg:mb-24 relative z-10">
+      <div ref={headerRef} className="max-w-4xl mb-10 md:mb-16 lg:mb-24 relative z-10">
         <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-6">Government Appointed</h5>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
           Professional <span className="text-secondary italic">Notary</span> Services.
@@ -43,7 +43,7 @@ export default function NotarySection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center">
         <div ref={gridRef} className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
             <FileCheck className="w-8 h-8 text-secondary" />

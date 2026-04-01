@@ -26,7 +26,7 @@ export default function AboutHighlight() {
         </span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
         {/* Image Column */}
         <div ref={imageRef} className="relative group">
           <div className="aspect-[4/5] bg-primary relative z-10 overflow-hidden shadow-2xl border-[15px] border-white">

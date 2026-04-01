@@ -35,7 +35,7 @@ export default function ArticlesPreview() {
 
   return (
     <Section id="articles" className="bg-white relative overflow-hidden">
-      <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-24 relative z-10">
+      <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10 md:mb-16 lg:mb-24 relative z-10">
         <div className="max-w-2xl">
           <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-4">
             Insights & Intelligence
@@ -54,7 +54,7 @@ export default function ArticlesPreview() {
 
       <div 
         ref={gridRef}
-        className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8"
       >
         {featuredArticles.map((article, idx) => (
           <div 
