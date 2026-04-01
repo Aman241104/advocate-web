@@ -31,11 +31,7 @@ export default function NotarySection() {
         />
       </div>
 
-      {/* Subtle Readability Overlay - reduced intensity and width */}
-      <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-base/80 to-transparent z-1 pointer-events-none" />
-
-      <div ref={headerRef} className="max-w-4xl mb-10 md:mb-16 lg:mb-24 relative z-10">
-        <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-6">Government Appointed</h5>
+      <div ref={headerRef} className="max-w-4xl mb-10 md:mb-16 lg:mb-24 relative z-10">        <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-6">Government Appointed</h5>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
           Professional <span className="text-secondary italic">Notary</span> Services.
         </h2>
