@@ -29,9 +29,9 @@ export default function Footer() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-10 mb-16">
           {/* Brand Column */}
-          <div className="space-y-6">
+          <div className="space-y-6 sm:col-span-2 lg:col-span-1">
             <Link href="#home" className="flex flex-col">
               <span className="font-serif text-2xl font-bold tracking-tight text-white leading-none">
                 Divya N Modi
@@ -40,7 +40,7 @@ export default function Footer() {
                 Advocate & Notary
               </span>
             </Link>
-            <p className="text-white/70 text-sm leading-relaxed max-w-xs">
+            <p className="text-white/70 text-sm leading-relaxed max-w-sm">
               With 29+ years of legal excellence, Divya N Modi provides trusted advocacy and professional notary services in Ahmedabad, focusing on integrity and results.
             </p>
             <div className="flex space-x-4 pt-2">
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="sm:col-span-1">
             <h4 className="font-serif text-lg font-bold mb-6 text-secondary">Quick Links</h4>
             <ul className="space-y-4">
               {quickLinks.map((link) => (
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* Practice Areas */}
-          <div>
+          <div className="sm:col-span-1">
             <h4 className="font-serif text-lg font-bold mb-6 text-secondary">Practice Areas</h4>
             <ul className="space-y-4">
               {practiceAreas.map((link) => (
@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="font-serif text-lg font-bold mb-6 text-secondary">Contact Info</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 group">

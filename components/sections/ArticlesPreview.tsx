@@ -40,14 +40,14 @@ export default function ArticlesPreview() {
           <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-4">
             Insights & Intelligence
           </h5>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary leading-tight">
-            The <span className="text-secondary italic">Adhikar</span> Column.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary leading-tight">
+            The <span className="text-secondary italic inline-block pr-2">Adhikar</span> Column.
           </h2>
-          <p className="text-primary/60 mt-6 text-lg leading-relaxed">
+          <p className="text-primary/60 mt-6 text-base md:text-lg leading-relaxed">
             Exploring legal complexities through over 200 published articles in Divya Bhaskar Madhurima Magazine.
           </p>
         </div>
-        <div className="inline-flex items-center text-sm font-bold uppercase tracking-widest text-primary/40 cursor-default">
+        <div className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary/40 cursor-default">
           Education Through Advocacy
         </div>
       </div>
@@ -59,7 +59,7 @@ export default function ArticlesPreview() {
         {featuredArticles.map((article, idx) => (
           <div 
             key={idx} 
-            className="group flex flex-col h-full bg-base p-10 hover:shadow-2xl transition-all duration-500 border-b-2 border-transparent hover:border-secondary cursor-default"
+            className="group flex flex-col h-full bg-base p-8 md:p-10 hover:shadow-2xl transition-all duration-500 border-b-2 border-transparent hover:border-secondary cursor-default"
           >
             <div className="flex justify-between items-start mb-8">
               <span className="text-[10px] font-bold uppercase tracking-widest text-secondary px-3 py-1 border border-secondary/20">
@@ -72,7 +72,7 @@ export default function ArticlesPreview() {
               <h3 className="text-2xl font-serif font-bold text-primary group-hover:text-secondary transition-colors duration-500 leading-snug">
                 {article.title}
               </h3>
-              <p className="text-primary/50 text-sm leading-relaxed line-clamp-3 italic">
+              <p className="text-primary/50 text-sm leading-relaxed line-clamp-3 italic pr-1">
                 {article.excerpt}
               </p>
             </div>

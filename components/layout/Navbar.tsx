@@ -42,6 +42,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>, href: string) => {
     e.preventDefault();
     const id = href.replace("#", "");
@@ -67,7 +78,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
           (scrolled || isOpen)
-            ? "bg-base/90 backdrop-blur-md py-4 shadow-sm"
+            ? "bg-base py-4 shadow-sm"
             : "bg-transparent py-6"
         )}
       >
@@ -78,12 +89,12 @@ export default function Navbar() {
             className="flex flex-col group cursor-pointer"
           >
             <span className={cn(
-              "font-serif text-2xl font-bold tracking-tight leading-none transition-colors duration-500",
+              "font-serif text-xl md:text-2xl font-bold tracking-tight leading-none transition-colors duration-500",
               (scrolled || isOpen) ? "text-primary" : "text-white"
             )}>
               Divya N Modi
             </span>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-secondary font-medium mt-1">
+            <span className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-secondary font-medium mt-1">
               Advocate & Notary
             </span>
           </div>
@@ -130,13 +141,13 @@ export default function Navbar() {
       {/* Mobile Menu Overlay & Drawer - COMPLETELY INDEPENDENT */}
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-[200] lg:hidden">
+          <div className="fixed inset-0 z-[9999] lg:hidden">
             {/* Backdrop Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-primary/40 backdrop-blur-md"
+              className="absolute inset-0 bg-primary/60 backdrop-blur-md"
               onClick={() => setIsOpen(false)}
             />
             
@@ -148,7 +159,7 @@ export default function Navbar() {
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               className="absolute top-0 right-0 bottom-0 w-[85%] max-w-sm bg-base shadow-2xl flex flex-col"
             >
-              <div className="p-8 flex items-center justify-between border-b border-primary/5">
+              <div className="p-8 flex items-center justify-between border-b border-primary/10">
                 <div className="flex flex-col">
                   <span className="font-serif text-xl font-bold tracking-tight text-primary leading-none">
                     Divya N Modi
@@ -166,14 +177,14 @@ export default function Navbar() {
                 </button>
               </div>
               
-              <div className="flex-1 overflow-y-auto p-10 space-y-6">
+              <div className="flex-1 overflow-y-auto p-8 md:p-10 space-y-4 md:space-y-6">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={(e) => scrollToSection(e, link.href)}
                     className={cn(
-                      "block text-3xl font-serif font-bold transition-all duration-300",
+                      "block text-2xl md:text-3xl font-serif font-bold transition-all duration-300",
                       activeSection === link.href.replace("#", "") 
                         ? "text-secondary pl-4 border-l-4 border-secondary" 
                         : "text-primary/60 hover:text-primary"
@@ -184,8 +195,8 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="p-10 border-t border-primary/5">
-                <Button variant="secondary" className="w-full h-16 rounded-none text-xl font-serif">
+              <div className="p-8 md:p-10 border-t border-primary/10">
+                <Button variant="secondary" className="w-full h-14 md:h-16 rounded-none text-lg md:text-xl font-serif">
                   <Phone className="w-5 h-5 mr-3" />
                   Consult Now
                 </Button>

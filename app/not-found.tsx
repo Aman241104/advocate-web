@@ -14,7 +14,7 @@ export default function NotFound() {
           <div className="max-w-3xl mx-auto space-y-10">
             <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary">Error 404</h5>
             <h1 className="text-6xl md:text-8xl font-serif font-bold text-primary tracking-tighter">
-              Page <span className="text-secondary italic">Not</span> Found.
+              Page <span className="text-secondary italic inline-block pr-2">Not</span> Found.
             </h1>
             <p className="text-primary/60 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
               The legal resource or page you are looking for has been moved, removed, or is temporarily unavailable. 

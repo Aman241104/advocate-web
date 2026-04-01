@@ -52,16 +52,16 @@ export default function Testimonials() {
       <Quote className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 text-white/[0.01] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-4 mb-10 md:mb-16">
           <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary">
             Client Success Stories
           </h5>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold">
-            Words From Our <span className="text-secondary italic">Clients</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold">
+            Words From Our <span className="text-secondary italic inline-block pr-2">Clients</span>
           </h2>
         </div>
 
-        <div className="relative min-h-[350px] flex items-center justify-center">
+        <div className="relative min-h-[400px] sm:min-h-[350px] flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -69,7 +69,7 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "circOut" }}
-              className="text-center space-y-10 px-8"
+              className="text-center space-y-6 md:space-y-10 px-4 sm:px-8"
             >
               <div className="flex justify-center space-x-1">
                 {[...Array(testimonials[index].rating)].map((_, i) => (
@@ -77,30 +77,32 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <blockquote className="text-2xl md:text-3xl font-serif italic font-medium leading-relaxed max-w-3xl mx-auto">
+              <blockquote className="text-xl sm:text-2xl md:text-3xl font-serif italic font-medium leading-relaxed max-w-3xl mx-auto pr-1">
                 &quot;{testimonials[index].quote}&quot;
               </blockquote>
 
               <div className="space-y-1">
-                <p className="font-bold text-lg text-secondary">{testimonials[index].author}</p>
-                <p className="text-xs uppercase tracking-widest text-white/40">{testimonials[index].role}</p>
+                <p className="font-bold text-base sm:text-lg text-secondary">{testimonials[index].author}</p>
+                <p className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40">{testimonials[index].role}</p>
               </div>
             </motion.div>
           </AnimatePresence>
 
           {/* Navigation Controls */}
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 md:-px-12">
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-0 md:-px-12 lg:-px-20 z-20">
             <button 
               onClick={prev}
-              className="p-4 hover:text-secondary transition-colors duration-300 focus:outline-none"
+              className="p-2 sm:p-4 text-white/40 hover:text-secondary transition-colors duration-300 focus:outline-none"
+              aria-label="Previous Testimonial"
             >
-              <ChevronLeft className="w-8 h-8" />
+              <ChevronLeft className="w-8 h-8 sm:w-10 sm:h-10" />
             </button>
             <button 
               onClick={next}
-              className="p-4 hover:text-secondary transition-colors duration-300 focus:outline-none"
+              className="p-2 sm:p-4 text-white/40 hover:text-secondary transition-colors duration-300 focus:outline-none"
+              aria-label="Next Testimonial"
             >
-              <ChevronRight className="w-8 h-8" />
+              <ChevronRight className="w-8 h-8 sm:w-10 sm:h-10" />
             </button>
           </div>
         </div>

@@ -81,16 +81,16 @@ export default function Hero() {
           {/* Headline */}
           <h1 
             ref={headlineRef}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] tracking-tight"
           >
             Trusted Advocacy <br />
-            <span className="text-secondary italic">Professional</span> Results
+            <span className="text-secondary italic inline-block pr-2">Professional</span> Results
           </h1>
 
           {/* Sub-headline */}
           <p 
             ref={sublineRef}
-            className="text-white/60 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
+            className="text-white/60 text-base sm:text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
           >
             Divya N Modi provides expert legal representation and professional notary services in Ahmedabad, built on a legacy of integrity and unwavering dedication.
           </p>
@@ -98,16 +98,16 @@ export default function Hero() {
           {/* CTAs */}
           <div 
             ref={ctaRef}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 md:pt-0"
           >
-            <a href="#contact">
-              <Button ref={ctaButtonRef} size="lg" className="rounded-none w-full sm:w-auto group">
+            <a href="#contact" className="w-full sm:w-auto">
+              <Button ref={ctaButtonRef} size="lg" className="rounded-none w-full sm:w-auto group h-14 sm:h-auto">
                 Schedule a Consultation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            <a href="#practice-areas">
-              <Button size="lg" variant="outline" className="rounded-none w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-primary">
+            <a href="#practice-areas" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="rounded-none w-full sm:w-auto border-white/20 text-white hover:bg-white hover:text-primary h-14 sm:h-auto">
                 View Practice Areas
               </Button>
             </a>
@@ -116,28 +116,28 @@ export default function Hero() {
           {/* Quick Stats */}
           <div 
             ref={statsRef}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-10 md:pt-16 border-t border-white/10"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-6 md:gap-8 pt-10 md:pt-16 border-t border-white/10"
           >
             <div className="space-y-2">
               <div className="flex items-center justify-center space-x-2 text-secondary">
                 <CheckCircle className="w-4 h-4" />
-                <span className="font-serif text-3xl font-bold text-white">200+</span>
+                <span className="font-serif text-2xl md:text-3xl font-bold text-white">200+</span>
               </div>
-              <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Published Articles</p>
+              <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/40 font-bold leading-tight">Published <br className="sm:hidden" /> Articles</p>
             </div>
             <div className="space-y-2">
               <div className="flex items-center justify-center space-x-2 text-secondary">
                 <CheckCircle className="w-4 h-4" />
-                <span className="font-serif text-3xl font-bold text-white">50+</span>
+                <span className="font-serif text-2xl md:text-3xl font-bold text-white">50+</span>
               </div>
-              <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">MNC Clients</p>
+              <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/40 font-bold leading-tight">MNC <br className="sm:hidden" /> Clients</p>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 col-span-2 sm:col-span-1">
               <div className="flex items-center justify-center space-x-2 text-secondary">
                 <ScrollText className="w-4 h-4" />
-                <span className="font-serif text-3xl font-bold text-white">2008</span>
+                <span className="font-serif text-2xl md:text-3xl font-bold text-white">2008</span>
               </div>
-              <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Official Notary Since</p>
+              <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/40 font-bold leading-tight">Official Notary <br className="sm:hidden" /> Since</p>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function AboutHighlight() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
         {/* Image Column */}
         <div ref={imageRef} className="relative group">
-          <div className="aspect-[4/5] bg-primary relative z-10 overflow-hidden shadow-2xl border-[15px] border-white">
+          <div className="aspect-[4/5] bg-primary relative z-10 overflow-hidden shadow-2xl border-[10px] md:border-[15px] border-white">
             <Image 
               src="/images/portrait-formal.png"
               alt="Divya N Modi - Senior Advocate & Notary"
@@ -40,10 +40,10 @@ export default function AboutHighlight() {
           </div>
           
           {/* Floating Experience Badge */}
-          <div className="absolute -bottom-10 -right-10 bg-secondary p-10 z-20 shadow-2xl hidden md:block">
+          <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 bg-secondary p-6 md:p-10 z-20 shadow-2xl">
             <div className="text-center text-white">
-              <p className="text-5xl font-serif font-bold">29</p>
-              <p className="text-[10px] uppercase tracking-widest font-bold mt-2">Years of <br /> Advocacy</p>
+              <p className="text-3xl md:text-5xl font-serif font-bold">29</p>
+              <p className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold mt-1 md:mt-2">Years of <br /> Advocacy</p>
             </div>
           </div>
 
@@ -78,9 +78,9 @@ export default function AboutHighlight() {
             <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary">
               A Legacy of Trust
             </h5>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
               Defending Rights with <br />
-              <span className="text-secondary italic">Unwavering</span> Integrity.
+              <span className="text-secondary italic inline-block pr-2">Unwavering</span> Integrity.
             </h2>
           </div>
 

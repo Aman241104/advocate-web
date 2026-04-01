@@ -32,31 +32,31 @@ export default function NotarySection() {
       </div>
 
       <div ref={headerRef} className="max-w-4xl mb-10 md:mb-16 lg:mb-24 relative z-10">        <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-6">Government Appointed</h5>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
-          Professional <span className="text-secondary italic">Notary</span> Services.
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+          Professional <span className="text-secondary italic inline-block pr-2">Notary</span> Services.
         </h2>
-        <p className="text-primary/60 mt-10 text-xl leading-relaxed max-w-2xl italic border-l-4 border-secondary pl-6">
+        <p className="text-primary/60 mt-6 md:mt-10 text-lg md:text-xl leading-relaxed max-w-2xl italic border-l-4 border-secondary pl-6 pr-1">
           Official verification and legal attestation services since 2008, ensuring the highest standards of secrecy and reliability.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center">
-        <div ref={gridRef} className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+        <div ref={gridRef} className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
             <FileCheck className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">MNC Agreements</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Attestation for corporate contracts and service level agreements.</p>
           </div>
-          <div className="p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
             <ShieldCheck className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">Affidavits</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Drafting and attestation of legally binding affidavits for all purposes.</p>
           </div>
-          <div className="p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
             <Clock className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">Quick Processing</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Efficient verification services to respect your time constraints.</p>
           </div>
-          <div className="p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
+          <div className="p-6 md:p-8 bg-white shadow-sm space-y-4 border-b-2 border-transparent hover:border-secondary transition-all duration-300">
             <CheckCircle2 className="w-8 h-8 text-secondary" />
             <h4 className="font-serif font-bold text-primary">Absolute Secrecy</h4>
             <p className="text-xs text-primary/60 leading-relaxed">Guaranteed confidentiality for sensitive personal and business data.</p>
@@ -64,7 +64,7 @@ export default function NotarySection() {
         </div>
 
         <div ref={ctaRef} className="lg:col-span-5">
-          <div className="bg-primary p-12 text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-primary p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
             
             <h3 className="text-2xl font-serif font-bold mb-8 text-secondary">Verification Scope</h3>

@@ -78,11 +78,11 @@ export default function PracticeAreas() {
         <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-4">
           Areas of Expertise
         </h5>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
           Comprehensive Legal <br />
-          Solutions for <span className="text-secondary italic">Every Concern</span>.
+          Solutions for <span className="text-secondary italic inline-block pr-2">Every Concern</span>.
         </h2>
-        <p className="text-primary/60 mt-6 text-lg leading-relaxed max-w-2xl">
+        <p className="text-primary/60 mt-6 text-base md:text-lg leading-relaxed max-w-2xl">
           With nearly three decades of experience, we provide nuanced advocacy across personal, corporate, and civil law.
         </p>
       </div>
@@ -94,7 +94,7 @@ export default function PracticeAreas() {
         {practices.map((practice, idx) => (
           <div 
             key={idx} 
-            className="group block p-8 bg-base hover:bg-primary transition-all duration-500 relative overflow-hidden shadow-sm cursor-default"
+            className="group block p-6 md:p-8 bg-base hover:bg-primary transition-all duration-500 relative overflow-hidden shadow-sm cursor-default"
           >
             {/* Background Accent */}
             <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500">

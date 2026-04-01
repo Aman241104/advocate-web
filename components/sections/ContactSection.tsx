@@ -41,22 +41,22 @@ export default function ContactSection() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start relative z-10">
         {/* Contact Info Column */}
-        <div ref={infoRef} className="space-y-12">
+        <div ref={infoRef} className="space-y-10 md:space-y-12">
           <div className="space-y-6">
             <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary">
               Let&apos;s Talk
             </h5>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
               Begin Your <br />
-              <span className="text-secondary italic">Consultation</span> Today.
+              <span className="text-secondary italic inline-block pr-2">Consultation</span> Today.
             </h2>
-            <p className="text-primary/60 text-lg leading-relaxed">
+            <p className="text-primary/60 text-base md:text-lg leading-relaxed">
               We understand that legal matters are personal and sensitive. Our office ensures absolute secrecy 
               and a professional approach to every case we handle.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
             <div className="space-y-3">
               <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary/40">General Inquiry</h4>
               <div className="flex items-center space-x-3 group">
@@ -78,11 +78,11 @@ export default function ContactSection() {
           </div>
 
           <div className="pt-8 border-t border-primary/5 flex flex-wrap gap-4">
-             <Button variant="secondary" className="rounded-none h-14 px-8 group">
+             <Button variant="secondary" className="rounded-none h-14 px-8 group w-full sm:w-auto">
                 <Phone className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform" />
                 Call Office
              </Button>
-             <Button variant="outline" className="rounded-none h-14 px-8 border-primary/20 hover:bg-green-600 hover:border-green-600 hover:text-white group">
+             <Button variant="outline" className="rounded-none h-14 px-8 border-primary/20 hover:bg-green-600 hover:border-green-600 hover:text-white group w-full sm:w-auto">
                 <MessageCircle className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
                 WhatsApp
              </Button>
@@ -90,7 +90,7 @@ export default function ContactSection() {
         </div>
 
         {/* Form Column */}
-        <div ref={formRef} className="bg-white p-8 md:p-12 lg:p-16 shadow-2xl border border-primary/5">
+        <div ref={formRef} className="bg-white p-6 md:p-12 lg:p-16 shadow-2xl border border-primary/5">
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Input 
