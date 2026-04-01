@@ -22,13 +22,15 @@ export default function NotarySection() {
   return (
     <Section id="notary" className="bg-base border-y border-primary/5 relative overflow-hidden">
       {/* Decorative Courtroom Background */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none select-none z-0">
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none select-none z-0">
         <Image 
           src="/images/courtroom.png"
           alt="Empty Courtroom"
           fill
           className="object-cover object-center grayscale"
         />
+        {/* Sub-overlay to improve readability */}
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]" />
       </div>
 
       <div ref={headerRef} className="max-w-4xl mb-16 lg:mb-24 relative z-10">
@@ -36,7 +38,7 @@ export default function NotarySection() {
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
           Professional <span className="text-secondary italic">Notary</span> Services.
         </h2>
-        <p className="text-primary/60 mt-10 text-xl leading-relaxed max-w-2xl italic border-l-4 border-secondary pl-6">
+        <p className="text-primary mt-10 text-xl leading-relaxed max-w-2xl italic border-l-4 border-secondary pl-6">
           Official verification and legal attestation services since 2008, ensuring the highest standards of secrecy and reliability.
         </p>
       </div>

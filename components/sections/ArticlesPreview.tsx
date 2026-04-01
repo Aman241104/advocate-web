@@ -4,7 +4,6 @@ import { useRef } from "react";
 import Section from "@/components/layout/Section";
 import { useReveal } from "@/hooks/useReveal";
 import { BookOpen } from "lucide-react";
-import Image from "next/image";
 
 const featuredArticles = [
   {
@@ -36,16 +35,6 @@ export default function ArticlesPreview() {
 
   return (
     <Section id="articles" className="bg-white relative overflow-hidden">
-      {/* Decorative Law Books Background */}
-      <div className="absolute bottom-0 right-0 w-1/4 h-full opacity-[0.05] pointer-events-none select-none z-0">
-        <Image 
-          src="/images/books-ladder.png"
-          alt="Law Books and Ladder"
-          fill
-          className="object-contain object-right-bottom"
-        />
-      </div>
-
       <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 lg:mb-24 relative z-10">
         <div className="max-w-2xl">
           <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-4">
