@@ -8,6 +8,8 @@ import { useReveal } from "@/hooks/useReveal";
 import { useMagnetic } from "@/hooks/useMagnetic";
 import { Phone, Mail, Send, MessageCircle } from "lucide-react";
 
+import Image from "next/image";
+
 export default function ContactSection() {
   const infoRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
@@ -26,13 +28,23 @@ export default function ContactSection() {
   };
 
   return (
-    <Section id="contact" className="bg-base overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+    <Section id="contact" className="bg-base overflow-hidden relative">
+      {/* Decorative Background Image */}
+      <div className="absolute top-0 left-0 w-1/2 h-full opacity-[0.03] pointer-events-none select-none z-0">
+        <Image 
+          src="/images/hero-desk.png"
+          alt="Consultation Desk"
+          fill
+          className="object-cover object-left grayscale"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start relative z-10">
         {/* Contact Info Column */}
         <div ref={infoRef} className="space-y-12">
           <div className="space-y-6">
             <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary">
-              Let's Talk
+              Let&apos;s Talk
             </h5>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight">
               Begin Your <br />

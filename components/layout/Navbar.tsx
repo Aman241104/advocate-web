@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -74,7 +73,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <div 
-          onClick={(e) => scrollToSection(e as any, "#home")}
+          onClick={(e) => scrollToSection(e, "#home")}
           className="flex flex-col group cursor-pointer"
         >
           <span className={cn(

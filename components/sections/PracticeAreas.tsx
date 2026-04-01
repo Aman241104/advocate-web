@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import Section from "@/components/layout/Section";
 import { useReveal } from "@/hooks/useReveal";
-import Image from "next/image";
 import { 
   Heart, 
   Home, 
@@ -75,16 +74,6 @@ export default function PracticeAreas() {
 
   return (
     <Section id="practice-areas" className="bg-white relative overflow-hidden">
-      {/* Decorative Lady Justice Background */}
-      <div className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03] pointer-events-none select-none z-0">
-        <Image 
-          src="/images/lady-justice-full.png"
-          alt="Lady Justice Full"
-          fill
-          className="object-contain object-right"
-        />
-      </div>
-
       <div ref={headerRef} className="max-w-3xl mb-16 lg:mb-24 relative z-10">
         <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary mb-4">
           Areas of Expertise

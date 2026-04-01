@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const quickLinks = [
   { name: "About Us", href: "#about" },
@@ -16,8 +17,18 @@ const practiceAreas = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white pt-20">
-      <div className="container mx-auto px-6">
+    <footer className="bg-primary text-white pt-20 relative overflow-hidden">
+      {/* Decorative Background Image */}
+      <div className="absolute bottom-0 right-0 w-1/3 h-[80%] opacity-[0.02] pointer-events-none select-none z-0">
+        <Image 
+          src="/images/lady-justice-full.png"
+          alt="Lady Justice Full"
+          fill
+          className="object-contain object-right-bottom"
+        />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="space-y-6">

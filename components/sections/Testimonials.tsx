@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Section from "@/components/layout/Section";
 import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -40,9 +41,17 @@ export default function Testimonials() {
   return (
     <Section className="bg-primary text-white overflow-hidden relative">
       {/* Decorative Background Icon */}
-      <Quote className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 text-white/[0.03] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none select-none z-0">
+        <Image 
+          src="/images/lady-justice.png"
+          alt="Lady Justice"
+          fill
+          className="object-contain"
+        />
+      </div>
+      <Quote className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 text-white/[0.01] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center space-y-4 mb-16">
           <h5 className="text-[10px] uppercase tracking-[0.4em] font-bold text-secondary">
             Client Success Stories

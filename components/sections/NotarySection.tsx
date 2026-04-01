@@ -5,7 +5,7 @@ import Section from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
 import { useReveal } from "@/hooks/useReveal";
 import { useMagnetic } from "@/hooks/useMagnetic";
-import { FileCheck, ShieldCheck, Clock, CheckCircle2, Phone, MessageCircle } from "lucide-react";
+import { FileCheck, ShieldCheck, Clock, CheckCircle2, Phone } from "lucide-react";
 import Image from "next/image";
 
 export default function NotarySection() {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, RefObject } from "react";
+import { useEffect, RefObject } from "react";
 import { gsap } from "gsap";
 
 export function useMagnetic(

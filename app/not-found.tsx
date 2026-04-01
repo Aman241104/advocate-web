@@ -18,7 +18,7 @@ export default function NotFound() {
             </h1>
             <p className="text-primary/60 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
               The legal resource or page you are looking for has been moved, removed, or is temporarily unavailable. 
-              Let's get you back on the right path.
+              Let&apos;s get you back on the right path.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
               <Link href="/">

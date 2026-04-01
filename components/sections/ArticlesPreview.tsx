@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Section from "@/components/layout/Section";
 import { useReveal } from "@/hooks/useReveal";
-import { ArrowUpRight, BookOpen } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import Image from "next/image";
 
 const featuredArticles = [
