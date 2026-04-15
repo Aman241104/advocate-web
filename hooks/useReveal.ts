@@ -23,7 +23,7 @@ export function useReveal(
     delay = 0,
     duration = 1.2,
     stagger = 0,
-    threshold = 0.1,
+    threshold = -0.1,
   } = options;
 
   useEffect(() => {

@@ -35,7 +35,7 @@ export default function AboutHighlight() {
               alt="Divya N Modi - Senior Advocate & Notary"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700 scale-100 md:scale-110 md:group-hover:scale-100"
+              className="object-cover object-center transition-all duration-700 scale-100 md:scale-110 md:group-hover:scale-100"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent mix-blend-multiply" />
           </div>
@@ -50,7 +50,7 @@ export default function AboutHighlight() {
 
           {/* Secondary Approchable Image */}
           <div className="absolute top-1/2 -left-20 w-48 h-64 bg-white p-3 shadow-2xl z-20 hidden xl:block -translate-y-1/2">
-             <div className="w-full h-full relative overflow-hidden grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700">
+             <div className="w-full h-full relative overflow-hidden">
                <Image 
                  src="/images/portrait-smile.png"
                  alt="Divya N Modi - Approachable Advocacy"
@@ -63,7 +63,7 @@ export default function AboutHighlight() {
 
           {/* Team Image Element */}
           <div className="absolute -top-10 -left-10 w-64 h-40 bg-white p-3 shadow-2xl z-20 hidden xl:block md:group-hover:translate-x-4 transition-transform duration-700">
-             <div className="w-full h-full relative overflow-hidden grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700">
+             <div className="w-full h-full relative overflow-hidden">
                <Image 
                  src="/images/team.png"
                  alt="Legal Team"

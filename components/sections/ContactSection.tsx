@@ -36,7 +36,7 @@ export default function ContactSection() {
           alt="Consultation Desk"
           fill
           sizes="50vw"
-          className="object-cover object-left grayscale"
+          className="object-cover object-left"
         />
       </div>
 

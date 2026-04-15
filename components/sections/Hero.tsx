@@ -56,7 +56,7 @@ export default function Hero() {
       {/* Background Image Integration */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-primary/80 z-10" /> {/* Dark Overlay */}
-        <div className="absolute inset-0 grayscale opacity-40 mix-blend-overlay">
+        <div className="absolute inset-0 opacity-40 mix-blend-overlay">
            <Image 
              src="/images/courtroom-scene.png" 
              alt="Courtroom in Session" 

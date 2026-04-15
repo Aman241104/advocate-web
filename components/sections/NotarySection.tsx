@@ -15,7 +15,7 @@ export default function NotarySection() {
   const magneticBtnRef = useRef<HTMLButtonElement>(null);
 
   useReveal(headerRef);
-  useReveal(gridRef, { stagger: 0.1 });
+  useReveal(gridRef, { stagger: 0.1, threshold: -0.1 });
   useReveal(ctaRef, { direction: "up", delay: 0.5 });
   useMagnetic(magneticBtnRef, 0.2);
 
@@ -28,7 +28,7 @@ export default function NotarySection() {
           alt="Empty Courtroom"
           fill
           sizes="100vw"
-          className="object-cover object-center grayscale"
+          className="object-cover object-center"
         />
       </div>
 

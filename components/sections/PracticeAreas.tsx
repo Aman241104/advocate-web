@@ -70,7 +70,7 @@ export default function PracticeAreas() {
   const gridRef = useRef<HTMLDivElement>(null);
 
   useReveal(headerRef);
-  useReveal(gridRef, { stagger: 0.1, threshold: 0.2 });
+  useReveal(gridRef, { stagger: 0.1, threshold: -0.1 });
 
   return (
     <Section id="practice-areas" className="bg-white relative overflow-hidden">
