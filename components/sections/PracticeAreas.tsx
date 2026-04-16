@@ -94,7 +94,7 @@ export default function PracticeAreas() {
         {practices.map((practice, idx) => (
           <div 
             key={idx} 
-            className="group block p-6 md:p-8 bg-base active:bg-primary md:hover:bg-primary transition-all duration-500 relative overflow-hidden shadow-sm cursor-default"
+            className="group block p-6 md:p-8 bg-base active:bg-primary md:hover:bg-primary transition-all duration-500 relative overflow-hidden shadow-md md:hover:shadow-2xl cursor-default"
           >
             {/* Background Accent */}
             <div className="absolute top-0 right-0 p-4 opacity-[0.03] active:opacity-[0.08] md:group-hover:opacity-[0.08] transition-opacity duration-500">

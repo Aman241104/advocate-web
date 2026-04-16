@@ -74,7 +74,7 @@ export default function ContactSection() {
                 <div className="p-2 bg-white rounded-full text-secondary md:group-hover:bg-secondary md:group-hover:text-white transition-all duration-300">
                   <Mail className="w-4 h-4" />
                 </div>
-                <a href="mailto:Divya_legal@yahoo.com" className="text-lg font-bold text-primary break-all">Divya_legal@yahoo.com</a>
+                <a href="mailto:Divya_legal@yahoo.com" className="text-base sm:text-lg font-bold text-primary whitespace-nowrap">Divya_legal@yahoo.com</a>
               </div>
             </div>
           </div>

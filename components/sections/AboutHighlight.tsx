@@ -48,31 +48,7 @@ export default function AboutHighlight() {
             </div>
           </div>
 
-          {/* Secondary Approchable Image */}
-          <div className="absolute top-1/2 -left-20 w-48 h-64 bg-white p-3 shadow-2xl z-20 hidden xl:block -translate-y-1/2">
-             <div className="w-full h-full relative overflow-hidden">
-               <Image 
-                 src="/images/portrait-smile.png"
-                 alt="Divya N Modi - Approachable Advocacy"
-                 fill
-                 sizes="192px"
-                 className="object-cover object-center"
-               />
-             </div>
-          </div>
 
-          {/* Team Image Element */}
-          <div className="absolute -top-10 -left-10 w-64 h-40 bg-white p-3 shadow-2xl z-20 hidden xl:block md:group-hover:translate-x-4 transition-transform duration-700">
-             <div className="w-full h-full relative overflow-hidden">
-               <Image 
-                 src="/images/team.png"
-                 alt="Legal Team"
-                 fill
-                 sizes="256px"
-                 className="object-cover object-center"
-               />
-             </div>
-          </div>
         </div>
 
         {/* Text Column */}
