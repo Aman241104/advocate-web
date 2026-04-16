@@ -73,17 +73,27 @@ export default function ContactSection() {
                 <div className="p-2 bg-white rounded-full text-secondary md:group-hover:bg-secondary md:group-hover:text-white transition-all duration-300">
                   <Mail className="w-4 h-4" />
                 </div>
-                <a href="mailto:info@divyamodi.in" className="text-lg font-bold text-primary">info@divyamodi.in</a>
+                <a href="mailto:Divya_legal@yahoo.com" className="text-lg font-bold text-primary break-all">Divya_legal@yahoo.com</a>
               </div>
             </div>
           </div>
 
           <div className="pt-8 border-t border-primary/5 flex flex-wrap gap-4">
-             <Button variant="secondary" className="rounded-none h-14 px-8 group w-full sm:w-auto">
+             <Button 
+                onClick={() => window.location.href = "tel:+919825416310"} 
+                type="button" 
+                variant="secondary" 
+                className="rounded-none h-14 px-8 group w-full sm:w-auto"
+             >
                 <Phone className="w-5 h-5 mr-3 md:group-hover:rotate-12 transition-transform" />
                 Call Office
              </Button>
-             <Button variant="outline" className="rounded-none h-14 px-8 border-primary/20 md:hover:bg-green-600 md:hover:border-green-600 md:hover:text-white group w-full sm:w-auto">
+             <Button 
+                onClick={() => window.open("https://wa.me/919825416310", "_blank")} 
+                type="button" 
+                variant="outline" 
+                className="rounded-none h-14 px-8 border-primary/20 md:hover:bg-green-600 md:hover:border-green-600 md:hover:text-white group w-full sm:w-auto"
+             >
                 <MessageCircle className="w-5 h-5 mr-3 md:group-hover:scale-110 transition-transform" />
                 WhatsApp
              </Button>

@@ -10,21 +10,23 @@ export default function JsonLd() {
     "telephone": siteConfig.phone,
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "301, Murlidhar complex, Fathepura",
       "addressLocality": "Ahmedabad",
+      "postalCode": "380007",
       "addressRegion": "Gujarat",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 23.0225, // Placeholder for Ahmedabad center
-      "longitude": 72.5714
+      "latitude": 23.0115, // Approximate for Paldi, Ahmedabad
+      "longitude": 72.5647
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "10:00",
-        "closes": "19:00"
+        "opens": "09:00",
+        "closes": "17:45"
       }
     ],
     "sameAs": [

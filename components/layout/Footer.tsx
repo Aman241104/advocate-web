@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 
 const quickLinks = [
@@ -83,9 +83,12 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 group">
                 <MapPin className="w-5 h-5 text-secondary shrink-0" />
-                <span className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
-                  Ahmedabad, Gujarat, India
-                </span>
+                <a href="https://maps.app.goo.gl/fNpcT4ykEey6AF8b9" target="_blank" rel="noopener noreferrer" className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
+                  301, Murlidhar complex,<br />
+                  Very close to fathepura cross road,<br />
+                  Nr Trupti Store,<br />
+                  Fathepura, Paldi, Ahmedabad - 380007
+                </a>
               </li>
               <li className="flex items-center space-x-3 group">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />
@@ -95,9 +98,15 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3 group">
                 <Mail className="w-5 h-5 text-secondary shrink-0" />
-                <a href="mailto:info@divyamodi.in" className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
-                  info@divyamodi.in
+                <a href="mailto:Divya_legal@yahoo.com" className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
+                  Divya_legal@yahoo.com
                 </a>
+              </li>
+              <li className="flex items-start space-x-3 group">
+                <Clock className="w-5 h-5 text-secondary shrink-0" />
+                <span className="text-white/70 text-sm md:group-hover:text-white transition-colors duration-300">
+                  Working Hours: 9:00 a.m to 5:45 p.m
+                </span>
               </li>
             </ul>
           </div>

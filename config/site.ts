@@ -8,9 +8,9 @@ export const siteConfig = {
     twitter: "https://twitter.com/divyanmodi",
     linkedin: "https://linkedin.com/in/divyanmodi",
   },
-  address: "Ahmedabad, Gujarat, India",
+  address: "301, Murlidhar complex, Fathepura, Paldi, Ahmedabad - 380007",
   phone: "+91 98254 16310",
-  email: "info@divyamodi.in",
+  email: "Divya_legal@yahoo.com",
   yearsExperience: "29+",
 };
 
