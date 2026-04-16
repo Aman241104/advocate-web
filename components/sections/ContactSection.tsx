@@ -17,15 +17,52 @@ export default function ContactSection() {
   const submitBtnRef = useRef<HTMLButtonElement>(null);
   
   const [formData, setFormData] = useState({ name: "", phone: "", subject: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useReveal(infoRef, { direction: "right" });
   useReveal(formRef, { direction: "left" });
   useMagnetic(submitBtnRef, 0.2);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Thank you. Your request for consultation has been received.");
+    setIsSubmitting(true);
+
+    try {
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      
+      if (scriptUrl) {
+        const formDataParams = new URLSearchParams();
+        formDataParams.append('name', formData.name);
+        formDataParams.append('phone', formData.phone);
+        formDataParams.append('subject', formData.subject);
+        formDataParams.append('message', formData.message);
+
+        // Submitting to Google Apps Script
+        await fetch(scriptUrl, {
+          method: 'POST',
+          body: formDataParams,
+          mode: 'no-cors'
+        });
+      } else {
+        console.warn("NEXT_PUBLIC_GOOGLE_SCRIPT_URL is not set in environment variables.");
+      }
+
+      // Prepare WhatsApp Redirection
+      const text = `*New Consultation Request*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+      const whatsappUrl = `https://wa.me/919825416310?text=${encodeURIComponent(text)}`;
+      
+      window.open(whatsappUrl, '_blank');
+      
+      setFormData({ name: "", phone: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an issue submitting your request. Redirecting to WhatsApp...");
+      
+      const fallbackText = `*New Consultation Request*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+      window.open(`https://wa.me/919825416310?text=${encodeURIComponent(fallbackText)}`, '_blank');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -135,9 +172,9 @@ export default function ContactSection() {
               onChange={(e) => setFormData({...formData, message: e.target.value})}
             />
             
-            <Button ref={submitBtnRef} type="submit" size="lg" className="w-full rounded-none group h-16 text-lg font-serif">
-              Send Consultation Request
-              <Send className="w-5 h-5 ml-3 md:group-hover:translate-x-1 md:group-hover:-translate-y-1 transition-transform" />
+            <Button ref={submitBtnRef} type="submit" size="lg" disabled={isSubmitting} className="w-full rounded-none group h-16 text-lg font-serif">
+              {isSubmitting ? "Sending details..." : "Send Consultation Request"}
+              {!isSubmitting && <Send className="w-5 h-5 ml-3 md:group-hover:translate-x-1 md:group-hover:-translate-y-1 transition-transform" />}
             </Button>
 
             <p className="text-[10px] text-center text-primary/40 uppercase tracking-widest font-bold">
