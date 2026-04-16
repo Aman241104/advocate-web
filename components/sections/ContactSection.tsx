@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { Input, Textarea } from "@/components/ui/Input";
 import { useReveal } from "@/hooks/useReveal";
 import { useMagnetic } from "@/hooks/useMagnetic";
-import { Phone, Mail, Send, MessageCircle } from "lucide-react";
+import { Phone, Mail, Send } from "lucide-react";
 
 import Image from "next/image";
+import { Icons } from "@/components/ui/Icons";
 
 export default function ContactSection() {
   const infoRef = useRef<HTMLDivElement>(null);
@@ -94,7 +95,7 @@ export default function ContactSection() {
                 variant="outline" 
                 className="rounded-none h-14 px-8 border-primary/20 md:hover:bg-green-600 md:hover:border-green-600 md:hover:text-white group w-full sm:w-auto"
              >
-                <MessageCircle className="w-5 h-5 mr-3 md:group-hover:scale-110 transition-transform" />
+                <Icons.WhatsApp className="w-5 h-5 mr-3 md:group-hover:scale-110 transition-transform" />
                 WhatsApp
              </Button>
           </div>
